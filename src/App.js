@@ -11,15 +11,16 @@ import Navigation from './Components/Navigation';
 class App extends React.Component {
 
   render() {
+    const baseUrl = process.env.PUBLIC_URL;
     return (
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={PostsMedia} />
-            <Route exact path="/Post/Add" component={PostAdd} />
-            <Route exact path="/Login" component={Login} />
-            <Route exact path="/Post/:PostID" component={PostDetail} />
-            <Route exact path="/Post/:PostID/Edit" component={PostEdit} />
+            <Route exact path={baseUrl + "/"} component={PostsMedia} />
+            <Route exact path={baseUrl + "/Post/Add"} component={PostAdd} />
+            <Route exact path={baseUrl + "/Login"} component={Login} />
+            <Route exact path={baseUrl + "/Post/:PostID"} component={PostDetail} />
+            <Route exact path={baseUrl + "/Post/:PostID/Edit"} component={PostEdit} />
           </Switch>
         </div>
       </Router>
