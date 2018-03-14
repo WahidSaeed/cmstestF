@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+.LoginJumbo .jumbotron {
+  padding: 2rem 2rem 4rem 2rem;
+}
+
+.LoginJumbo .jumbotron .btn-success{
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.Post {
+  /*border: 1px solid #d8d8d8;*/
+  padding: 1rem;
+  /*border-radius: .3rem;*/
+  margin-bottom: 15px;
+  /*background: #f5f5f5;*/
+}
+
+.Post-Date{
+  width: 15px;
+}
+
+.Post-Edit{
+  width: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.Post-Delete{
+  width: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.Post-Profile-img {
+  width: 80px;
+  margin: 10px 10px 0px 0px;
+}
+
+.pagination .page-item .page-link {
+  color: #00af66;
+}
+
+.pagination .page-item.active .page-link {
+  background: #00af66;
+}
+
+.navbar {
+  background: #000;
+  border-bottom: 4px solid #00af66;
+  margin-bottom: 40px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
