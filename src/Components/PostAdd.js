@@ -5,6 +5,7 @@ import { config } from '../firebaseConfig';
 import firebase from 'firebase';
 import LoginAuth from './LoginAuth';
 import Navigation from './Navigation';
+import { baseUrl } from '../Utility';
 
 
 class PostAdd extends React.Component {
@@ -50,7 +51,7 @@ class PostAdd extends React.Component {
             Status: this.state.Status
         }, ()=> {
             alert('Post Added');
-            this.props.history.push('/');
+            this.props.history.push(baseUrl + '/');
         });
         event.preventDefault();
     }
