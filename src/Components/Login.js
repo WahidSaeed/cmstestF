@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 import { Container, Row, Col, Jumbotron, Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import { baseUrl } from './Utility';
 
 class Login extends Component {
 
@@ -31,16 +32,16 @@ class Login extends Component {
     });
   }
 
-  handleSubmit(event){
+  handleSubmit(event) {
     event.preventDefault();
 
-    if(this.state.userName == 'admin' && this.state.password == 'admin'){
+    if (this.state.userName == 'admin' && this.state.password == 'admin') {
       localStorage["isLogged"] = true;
       this.setState({
         loggedin: true
       });
     }
-    else{
+    else {
       alert('Invalid ID/Password');
     }
 
@@ -49,7 +50,7 @@ class Login extends Component {
   render() {
     return (
       <div>
-        {(this.state.loggedin ? <Redirect to="/" /> : null)}
+        {(this.state.loggedin ? <Redirect to={baseUrl + "/"} /> : null)}
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />

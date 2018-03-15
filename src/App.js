@@ -7,11 +7,11 @@ import PostDetail from './Components/PostDetail';
 import PostAdd from './Components/PostAdd';
 import PostEdit from './Components/PostEdit';
 import Navigation from './Components/Navigation';
+import { baseUrl } from './Utility';
 
 class App extends React.Component {
 
   render() {
-    const baseUrl = process.env.PUBLIC_URL;
     return (
       <Router>
         <div>

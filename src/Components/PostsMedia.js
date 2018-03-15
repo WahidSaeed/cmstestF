@@ -9,6 +9,7 @@ import { config } from '../firebaseConfig';
 import firebase from 'firebase';
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
+import { baseUrl } from './Utility';
 
 
 class PostsMedia extends Component {
@@ -60,7 +61,7 @@ class PostsMedia extends Component {
       <div>
         <Navigation />
         {(JSON.parse((localStorage["isLogged"] ? localStorage["isLogged"] : 'false')) ?
-          <div onClick={() => { this.props.history.push('/Post/Add') }} style={{
+          <div onClick={() => { this.props.history.push(baseUrl + '/Post/Add') }} style={{
             width: '55px',
             height: '55px',
             background: '#00af66',
