@@ -5,6 +5,7 @@ import { config } from '../firebaseConfig';
 import firebase from 'firebase';
 import LoginAuth from './LoginAuth';
 import Navigation from './Navigation';
+import { baseUrl } from '../Utility';
 
 class PostEdit extends React.Component {
 
@@ -53,7 +54,7 @@ class PostEdit extends React.Component {
       Status: this.state.Status
     }, () => {
       alert('Post Updated');
-      this.props.history.push('/');
+      this.props.history.push(baseUrl + '/');
     });
     event.preventDefault();
   }
