@@ -9,6 +9,7 @@ import {
 import {
   Link
 } from 'react-router-dom'
+import { baseUrl } from '../Utility';
 
 class Navigation extends React.Component {
 
@@ -28,13 +29,13 @@ class Navigation extends React.Component {
     return (
       <div>
         <Navbar dark expand="md">
-          <Link to="/" className="navbar-brand">React CMS {this.state.isLogged === true ? '- Admin Panel' : ''}</Link>
+          <Link to={baseUrl + "/"} className="navbar-brand">React CMS {this.state.isLogged === true ? '- Admin Panel' : ''}</Link>
           <Nav className="ml-auto" navbar>
             <NavItem>
               {
                 (this.state.isLogged === true? 
-                  <NavLink href="#" onClick={this.logOut}><Link to="/Login">LogOut</Link></NavLink>:
-                  <NavLink href="#"><Link to="/Login">LogIn</Link></NavLink>
+                  <NavLink href="#" onClick={this.logOut}><Link to={baseUrl + "/Login"}>LogOut</Link></NavLink>:
+                  <NavLink href="#"><Link to={baseUrl + "/Login"}>LogIn</Link></NavLink>
                 )
               }
               
