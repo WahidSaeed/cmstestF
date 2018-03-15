@@ -9,7 +9,7 @@ import { config } from '../firebaseConfig';
 import firebase from 'firebase';
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
-import { baseUrl } from './Utility';
+import { baseUrl } from '../Utility';
 
 
 class PostsMedia extends Component {

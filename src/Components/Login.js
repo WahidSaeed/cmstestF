@@ -3,7 +3,7 @@ import logo from '../logo.svg';
 import '../App.css';
 import { Container, Row, Col, Jumbotron, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Redirect } from 'react-router-dom';
-import { baseUrl } from './Utility';
+import { baseUrl } from '../Utility';
 
 class Login extends Component {
 
