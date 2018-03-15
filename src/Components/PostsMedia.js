@@ -93,7 +93,7 @@ class PostsMedia extends Component {
           <Row>
             <Col lg="9" md={{ size: 9, offset: 1 }}>
               {
-                this.state.PostIDs.map((PostID) => {
+                this.state.PostIDs.reverse().map((PostID) => {
                   var PostData = this.state.Posts[PostID];
                   if (JSON.parse((localStorage["isLogged"] ? localStorage["isLogged"] : 'false')) || PostData.Status)
                     if (PostData.Title.indexOf(this.state.Search) > -1 || !PostData.Title)
